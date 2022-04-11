@@ -110,6 +110,10 @@ br {
     padding: 0.5rem 1rem;
 }
 
+.btn-primary a {
+    color: var(--secondary-color);
+}
+
 .btn-secondary {
     background-color: var(--secondary-color);
     border-radius: 5px; 
@@ -149,7 +153,7 @@ br {
 .navigation-list_item {
     text-decoration: none;
     margin-left: 1.5rem;
-    color: rgba(var(--primary-text-color), 0.8);
+    color: var(--primary-text-color);
     position: relative;
 }
 
