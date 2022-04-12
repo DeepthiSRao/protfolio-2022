@@ -53,14 +53,3 @@ function scrollActive() {
 }
 window.addEventListener('scroll', scrollActive);
 
-/* close button js for small screen */
-const closeBtn = document.querySelector('.close-btn');
-const changeIcon = e =>{
-  console.log(closeBtn.innerText);
-  if(closeBtn.innerText === ("🞬"))
-    closeBtn.innerText === ("☰");
-  else
-    closeBtn.innerText === ("🞬");
-}
-
-closeBtn.addEventListener('click', changeIcon);
