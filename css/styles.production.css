@@ -159,30 +159,29 @@ br {
 
 /* nav-bar */
 #page-header {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%;
-    padding: 10px;
-    height: 70px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     position: fixed;
     top: 0;
     z-index: 99;
+    height: 60px;
 }
 
 .navigation-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 }
 
 .navigation-list_item {
@@ -207,8 +206,8 @@ br {
 }
 
 .profile-photo {
-    height: 70px;
-    padding-top: 8px;
+    height: 60px;
+    margin-top: 10px;
     width: 250px;
     visibility: hidden;
     margin-left: 1.5rem;
@@ -216,10 +215,6 @@ br {
 
 .show {
     visibility: visible;
-}
-
-.close-btn {
-    display: none;
 }
 
 /* Index CSS */
@@ -398,14 +393,6 @@ br {
     body {
         font-size: calc(0.8 * 1.5rem);
     }
-    .icons {
-        -webkit-transform: scale(1.8);
-            -ms-transform: scale(1.8);
-                transform: scale(1.8);
-    }
-}
-
-@media screen and (max-width: 768px){
     .sm-flex-dir{
         -webkit-box-orient: vertical !important;
         -webkit-box-direction: normal !important;
@@ -415,6 +402,9 @@ br {
             -ms-flex-align: center;
                 align-items: center;
     }
+}
+
+@media screen and (max-width: 768px){
     .flex-items img {
         height: auto;
         width: 100%;
@@ -433,8 +423,12 @@ br {
     .container {
         margin: 0 5%;
     }
+    .icons {
+        -webkit-transform: scale(1.8);
+            -ms-transform: scale(1.8);
+                transform: scale(1.8);
+    }
     #index {
-        min-width: 480px;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
@@ -444,19 +438,12 @@ br {
         height: 180px !important;
         width: 180px !important;
     }
+    .column-1 {
+        padding-left: 0;
+    }
 }
 
 @media screen and (max-width: 480px){
-    ul{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        width: 100%;
-    }
-    #page-header{
-        height: 150px;
-    }
     .icons {
         -webkit-transform: none;
             -ms-transform: none;
