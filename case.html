@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepthi Rao| Front-End Developer</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="shortcut icon" href="./image/favicon-32x32.ico">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNX1L262GS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NNX1L262GS');
+    </script>        
+</head>
+<body>
+    <header id="page-header" class="back-link">       
+        <nav class="main-navigation">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a href="./index.html" role="menuitem" class="navigation-list_item active">&#8249; Back To Home</a>
+                </li>
+            </ul>            
+        </nav>
+    </header>
+    <section id="case" class="container">
+        <header class="section-header">
+            <h2>Case Study myFlix Full Stack Project</h2>
+        </header>
+        <div class="flex-items row-reverse sm-flex-dir">
+            <img src="./image/project/myFlix_react.png" alt="Project Pic">
+            <div class="flex-column content">
+                <p class="title">Overview</p>
+                <p class="case--desc">
+                    myFlix is a full stack app developed using MERN(MongoDB, Express,
+                    ReactJS and NodeJS) stack. This app is for movie enthusiasts to get
+                    information about movies, genres and directors. Users can update their
+                    personal information and create a list of their favorite movies. This project
+                    explores the fundamentals of both server side and client side
+                    programming.
+                </p>
+            </div>
+        </div>
+        <div class="flex-items row">
+            <div class="flex-column">
+                <p class="title">Server-Side Approach</p>
+                <p class="case--desc">
+                    I created REST APIs that were built using the Express framework to fetch
+                    data from cloud MongoDB. Authentication and authorization is
+                    implemented using JWT tokens. The API provides movie data in JSON
+                    format. Implemented data security and validation logic.
+                    The api was tested using Postman and the app was deployed to Heroku.
+                    <br/>
+                    <a href="https://github.com/DeepthiSRao/movie_api" target="_blank" class="link">
+                        <span class="material-symbols-outlined">arrow_right</span>
+                        <span>Endpoints</span> 
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="flex-items row">
+            <div class="flex-column">
+                <p class="title">Client-Side Approach</p>
+                <p class="case--desc">
+                    After completing the server-side, I started building responsive client-side
+                    using ReactJS which will handle data through the myFlex API endpoints.
+                    Implemented routing to navigate between the views using react router.
+                    Data sharing across the views was implemented using React-redux.
+                    Bootstrap is used as a UI library for styling and responsiveness.
+                    <a href="https://myflix-react-app.netlify.app/" target="_blank" class="link">
+                        <span class="material-symbols-outlined">arrow_right</span>
+                        <span>Live Demo</span> 
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="flex-items row">
+            <div class="flex-column">
+                <p class="title">Challenges</p>
+                <p class="case--desc">
+                    This was my favorite project as I got an opportunity to showcase my prior
+                    knowledge about ReactJS and learn a new server side framework. I
+                    enjoyed building the API with expressJS and working with a noSQL
+                    database. Developing a client-side was less time consuming and
+                    implemented additional features like page loading, pagination and search
+                    by title. While hosting the client-side, faced cors issues and deployment
+                    issues. But with the help of my great mentor, I could resolve the issues.
+                </p>
+            </div>
+        </div>
+        <div class="flex-items row">
+            <div class="flex-column">
+                <p class="title">Duration</p>
+                <p class="case--desc">
+                    This project took about six weeks to complete both server side and client side.
+                </p>
+            </div>
+        </div>
+        <div class="flex-items row">
+            <div class="flex-column">
+                <p class="title">Credits</p>
+                <p class="case--desc credits">
+                    Role: Lead Developer <br/>
+                    Mentor: Alfredo Salazar Vélez <br/>
+                    Tutor: Kervin Vasquez Hernandez <br/>
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,16 +1,15 @@
-
 /* Function for changing head color */
 const scrollHeader = () => {
     const header = document.getElementById('page-header');
-    const header_logo = document.querySelector('.profile-photo');
+    //const header_logo = document.querySelector('.profile-photo');
 
     if (this.scrollY >= 80) {
       header.classList.add('scroll-header');
-      header_logo.classList.add('show');
+      //header_logo.classList.add('show');
     }
     else {
       header.classList.remove('scroll-header');
-      header_logo.classList.remove('show');
+      //header_logo.classList.remove('show');
     }
   }
   window.addEventListener('scroll', scrollHeader);
@@ -53,3 +52,39 @@ function scrollActive() {
 }
 window.addEventListener('scroll', scrollActive);
 
+/* Sending message */
+const submitBtn = document.querySelector('.btn-submit');
+
+submitBtn.addEventListener('click', e => {
+  e.preventDefault();
+  let userName = document.getElementById('name').value;
+  let userEmail = document.getElementById('email').value;
+  let userMessage = document.getElementById('message').value;
+
+  let templateParams = {
+    from_name: userName,
+    from_email: userEmail,
+    message: userMessage
+  }
+  if (userName.value !== "" && 
+      userEmail.value !== "" && 
+      userMessage.value !== "") {
+      sendMail({
+        from_name: userName,
+        from_email: userEmail,
+        message: userMessage
+      });
+  }
+});
+
+const sendMail = (templateParams) => {
+  console.log('Trying to send an email', templateParams);
+  
+  emailjs.send('service_gmucw3h', 'template_skvkxzg', templateParams, "BZZ0KT-jVBk-N6PU-")
+         .then(function(response) {
+            console.log('Message successfully sent!');
+            window.location.reload(false);
+          }, function(error) {
+              console.log('FAILED to send message');
+          });
+}
