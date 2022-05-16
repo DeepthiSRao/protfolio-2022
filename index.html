@@ -10,7 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="shortcut icon" href="./image/favicon-32x32.ico"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">         
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNX1L262GS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NNX1L262GS');
+    </script>        
 </head>
 <body>
     <header id="page-header">       
@@ -39,7 +49,11 @@
                 <h1>Deepthi Rao</h1>
                 <h2>FrontEnd Developer | Bay Area, USA</h2>
                 <button class="profile-btn">
-                    <a href="#work">Know More About My Work</a>
+                    <a href="#work" class="link">Know More About My Work &nbsp;
+                        <span class="material-symbols-outlined">
+                            arrow_downward
+                        </span>
+                    </a>
                 </button>
             </div>
         </section>
@@ -48,7 +62,7 @@
             <header class="section-header">
                 <h1>About Page</h1>
             </header>
-            <div class="flex-items rows sm-flex-dir">
+            <div class="flex-items row sm-flex-dir">
                 <p class="text-primary flex-column">
                     Hi, My name is Deepthi Rao.<br/> 
                     I am a Web developer with 2+ years experience in ReactJS. I love to code and strive to learn new technology along with understanding the 
@@ -58,7 +72,7 @@
                     In my free time you can find playing video game, painting or walking.
                 </p>
                 <div class="flex-column">
-                    <p class="title">My Skills</p>
+                    <h2 class="grid-item-title">My Skills</h2>
                     <br>
                     <div class="icons">
                         <i class="devicon-html5-plain-wordmark"></i>                        
@@ -82,30 +96,10 @@
                 <h1>Projects</h1>
             </header>
             <div class="project-list">
-                <!-- 1. Pokemon JS App -->
-                <div class="flex-items row project-item sm-flex-dir">
-                    <img src="./image/project/pokedex.png" alt="Project Pic">
-                    <div class="flex-items column project-content">
-                        <h2 class="grid-item-title">Pokedex</h2>                                       
-                        <p class="project-item--desc">
-                            A Pokédex responsive web app developed using HTML, CSS and Javascript.
-                            The app fetches Pokémon data from external API and displays a list of Pokémon.
-                            The list is searchable by name. On click of pokemon, modal is displayed with Pokémon sprites, height and type.
-                        </p>
-                        <div class="action-btn">
-                            <button class="btn-primary mx-1">
-                                <a href="https://github.com/DeepthiSRao/pokemon-js-app" target="_blank">Github</a>
-                            </button>
-                            <button class="btn-secondary mx-1">
-                                <a href="https://deepthisrao.github.io/pokemon-js-app/" target="_blank">Demo</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
                 <!-- 2. myFlix Client React App -->
-                <div class="flex-items row-reverse project-item sm-flex-dir">
+                <div class="flex-items row project-item sm-flex-dir">
                     <img src="./image/project/myFlix_react.png" alt="Project Pic">
-                    <div class="flex-items column project-content">
+                    <div class="flex-items column content">
                         <h2 class="grid-item-title">myFlix</h2>                                       
                         <p class="project-item--desc">
                             MyFlix is a client side application built using ReactJS for its existing server-side code. 
@@ -116,8 +110,31 @@
                             <button class="btn-primary mx-1">
                                 <a href="https://github.com/DeepthiSRao/myFlix-client" target="_blank">Github</a>
                             </button>
-                            <button class="btn-secondary mx-1">
+                            <button class="btn-primary mx-1">
                                 <a href="https://myflix-react-app.netlify.app/" target="_blank">Demo</a>
+                            </button>
+                            <button class="btn-primary mx-1">
+                                <a href="./case.html">Case Study</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1. Pokemon JS App -->
+                <div class="flex-items row-reverse project-item sm-flex-dir">
+                    <img src="./image/project/pokedex.png" alt="Project Pic">
+                    <div class="flex-items column content">
+                        <h2 class="grid-item-title">Pokedex</h2>                                       
+                        <p class="project-item--desc">
+                            A Pokédex responsive web app developed using HTML, CSS and Javascript.
+                            The app fetches Pokémon data from external API and displays a list of Pokémon.
+                            The list is searchable by name. On click of pokemon, modal is displayed with Pokémon sprites, height and type.
+                        </p>
+                        <div class="action-btn">
+                            <button class="btn-primary mx-1">
+                                <a href="https://github.com/DeepthiSRao/pokemon-js-app" target="_blank">Github</a>
+                            </button>
+                            <button class="btn-primary mx-1">
+                                <a href="https://deepthisrao.github.io/pokemon-js-app/" target="_blank">Demo</a>
                             </button>
                         </div>
                     </div>
@@ -125,7 +142,7 @@
                 <!-- 3. Meetup App -->
                 <div class="flex-items row project-item sm-flex-dir">
                     <img src="./image/project/meetup_react.png" alt="Project Pic">
-                    <div class="flex-items column project-content">
+                    <div class="flex-items column content">
                         <h2 class="grid-item-title">MeetUp</h2>                                       
                         <p class="project-item--desc">
                             MeetUp app is a serverless, progressive web application(PWA) built with ReactJS using TDD(Test driven development) approach. 
@@ -136,7 +153,7 @@
                             <button class="btn-primary mx-1">
                                 <a href="https://github.com/DeepthiSRao/meet-react-app" target="_blank">Github</a>
                             </button>
-                            <button class="btn-secondary mx-1">
+                            <button class="btn-primary mx-1">
                                 <a href="https://deepthisrao.github.io/meet-react-app" target="_blank">Demo</a>
                             </button>
                         </div>
@@ -145,7 +162,7 @@
                 <!-- 4. myFlix Client Angular App -->
                 <div class="flex-items row-reverse project-item sm-flex-dir">
                     <img src="./image/project/myFlix_angular.png" alt="Project Pic">
-                    <div class="flex-items column project-content">
+                    <div class="flex-items column content">
                         <h2 class="grid-item-title">myFlix Angular</h2>                                       
                         <p class="project-item--desc">
                             MyFlix is a client side application built using Angular for its existing server-side code. 
@@ -156,7 +173,7 @@
                             <button class="btn-primary mx-1">
                                 <a href="https://github.com/DeepthiSRao/myflix-angular-client" target="_blank">Github</a>
                             </button>
-                            <button class="btn-secondary mx-1">
+                            <button class="btn-primary mx-1">
                                 <a href="https://deepthisrao.github.io/myflix-angular-client/home" target="_blank">Demo</a>
                             </button>
                         </div>
@@ -165,7 +182,7 @@
                 <!-- 5. Chat App -->
                 <div class="flex-items row project-item sm-flex-dir" id="project2">
                     <img src="./image/project/ChatApp.png" alt="Project Pic">
-                    <div class="flex-items column project-content">
+                    <div class="flex-items column content">
                         <h2 class="grid-item-title">Chat App</h2>                                       
                         <p class="project-item--desc">
                             Chat App is a mobile application built using React Native. 
@@ -192,7 +209,7 @@
             </p>
         </header>
         <div class="column contact-form">
-            <form action="#contact" method="post">
+            <form method="post">
                 <div class="form-field">
                     <label for="name">Your Name</label>
                     <input 
@@ -211,31 +228,37 @@
                 </div> 
                 <div class="form-field">
                     <label for="message">Your Message</label>
-                    <textarea 
+                    <textarea
                         name="message" 
                         id="message" 
                         cols="30" 
                         rows="8"
-                        maxlength="200"
+                        maxlength="400"
                         required
                         ></textarea>
                 </div>
-                <button class="btn-primary" type="submit">Send</button>                        
+                <button 
+                    class="btn-primary btn-submit" 
+                    type="submit">
+                    Send
+                </button>                        
             </form>
         </div>
     </section>
     <footer class="page-footer flex-items column"> 
         <div class="social-media">
-            <a href="https://github.com/DeepthiSRao" target="_blank"><i class="devicon-github-original colored"></i></a>
+            <a href="https://github.com/DeepthiSRao" target="_blank"><i class="devicon-github-original"></i></a>
             <a href="https://twitter.com/DeepthiSriRao" target="_blank"><i class="devicon-twitter-original"></i></a>
             <a href="https://www.linkedin.com/in/deepthi-srinidhi-rao/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
-            <a href="https://www.linkedin.com/in/deepthi-srinidhi-rao/" target="_blank"><i class="devicon-medium-plain"></i></a>
         </div>
         <p class="footer__copy">
             Copyright &#169; 2022
         </p>
     </footer>
     <!-- JS Scripts -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/tota11y.min.js"></script>
 </body>

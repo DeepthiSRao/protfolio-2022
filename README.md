@@ -1,5 +1,7 @@
-# portfolio
+# Portfolio
 This portfolio website is developed using HMTL and CSS. This is to introduce myself and to showcase my technical work.
+
+# Live demo(https://deepthisrao.com/)
 
 # Technologies used
 * HTML
