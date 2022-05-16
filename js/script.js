@@ -53,3 +53,25 @@ function scrollActive() {
 }
 window.addEventListener('scroll', scrollActive);
 
+// Toggle menu on small screens
+
+function toggleMenu() {
+  let menu = document.querySelector('.menu-container');
+  menu.classList.toggle('visible');
+}
+
+let hamburger = document.querySelector('.hamburger');
+
+hamburger.addEventListener('click', toggleMenu);
+
+// Hide mobile menu after a menu item has been clicked
+
+function hideMenu() {
+  let menu = document.querySelector('.menu-container');
+  if (menu.classList.contains('visible')) {
+    menu.classList.remove('visible');
+  }
+}
+
+menuList = document.querySelector('.menu');
+menuList.addEventListener('click', hideMenu);
