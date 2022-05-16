@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lobster&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #22223b; 
+    --secondary-color: #fff;
+    --primary-text-color: #4a4e69;
+    --footer-color: #e0e1dd;
+    --font-size: 1.5rem;
+    --nav-bar-height: 60px;
+}
+
+body {
+    font: normal var(--font-size)/1.6 'Lato', sans-serif;
+    color: var(--primary-text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-family: 'Lobster', cursive;
+    color: var(--primary-color);
+}
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+p {
+    margin: 10px 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+ol, li {
+    list-style-type: none;
+}
+
+br {
+    margin-bottom: 1rem;
+}
+
+.scroll-header {    
+    background-color: var(--secondary-color);
+}
+
+.section-header h1 {
+    margin-top: 5rem;
+}
+
+/* utility class */
+.flex-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    flex: 1 0 50%;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.row img, .row-reverse .project-content {
+    padding-right: 1rem;
+}
+
+.text-primary {
+    text-align: left;
+}
+
+.container {
+    min-width: 480px;
+    margin: 0 20%;
+}
+
+.flex-column {
+    flex: 1;
+}
+
+.icons {
+    width: 100%;
+    text-align: center;
+    transform: scale(2.2);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 5px; 
+    padding: 0.5rem 1rem;
+}
+
+.btn-primary a {
+    color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-radius: 5px; 
+    padding: 0.5rem 1rem;
+}
+
+.btn-secondary a {
+    color: var(--primary-color);
+}
+
+.my-1 {
+    margin: 1rem auto;
+}
+
+.mx-1 {
+    margin: 0 0.5rem;
+}
+
+/* nav-bar */
+#page-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    height: var(--nav-bar-height);
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navigation-list_item {
+    text-decoration: none;
+    margin-left: 1.5rem;
+    color: var(--primary-text-color);
+    position: relative;
+}
+
+.navigation-list_item:last-child {
+    margin-right: 1.5rem;
+}
+
+.navigation-list_item:hover{
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.navigation-list .active{
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+.profile-photo {
+    height: var(--nav-bar-height);
+    margin-top: 10px;
+    width: 250px;
+    visibility: hidden;
+    margin-left: 1.5rem;
+}
+
+.show {
+    visibility: visible;
+}
+
+/* Index CSS */
+#index {  
+    height: 100vh;
+    position: relative;
+    color: var(--primary-color);
+    background: url('../image/background.jpg') no-repeat center center/cover;;
+}
+
+.profile_portrait {
+    height: 400px !important;
+    width: 400px !important;
+    border-radius: 50%;
+    padding-right: 0 !important;
+}
+
+.column-1 {
+    padding-left: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.profile-btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: 4px solid var(--primary-color);
+}
+
+.profile-btn a {
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.profile-btn:hover, .btn-primary:hover, .btn-secondary:hover {
+    background-color: var(--footer-color);
+}
+
+/* Work Page */
+.project-list {
+    padding: 1rem auto;
+}
+
+.flex-items img {
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.project-item {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.project-item--desc {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 0;
+    text-align: justify;
+}
+
+.project-content {
+    position: relative;
+    height: 400px;
+    justify-content: flex-start;
+}
+
+.project-content p {
+    margin: 1rem auto;
+}
+
+.action-btn {
+    position: absolute;
+    bottom: 0;
+}
+
+/* Contact Page*/
+.contact-header {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form {
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.contact-header h1{
+    margin: 0;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    display: inline-block;
+}
+
+.contact-title {
+    margin: 20px;
+    text-decoration: underline;
+}
+
+/* About Page*/
+.title {
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.download-btn {
+    text-decoration: none;
+    font-weight: var(--font-weight);   
+    padding: 8px 20px;
+    transition: opacity 4s ease-in-out;
+}
+
+.download-btn:hover {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+/* Footer */
+.page-footer {
+    padding: 1rem;
+    font-size: calc(0.8 * var(--font-size));
+    width: 100%;
+    background-color: var(--footer-color);
+}
+
+.page-footer .social-media > * {
+    margin-right:  1rem;
+}
+
+.page-footer a {
+    color: var(--primary-color);
+}
+
+.page-footer a:hover {
+    opacity: .6;
+}
+
+@media screen and (max-width: 1200px){
+    .container {
+        margin: 0 10%;
+    }
+    body {
+        font-size: calc(0.8 * var(--font-size));
+    }
+    .sm-flex-dir{
+        flex-direction: column !important;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .flex-items img {
+        height: auto;
+        width: 100%;
+    }
+    .project-item--desc {
+        line-height: 1.2;
+    }
+    .project-content {
+        justify-content: center;
+    }
+    .action-btn {
+        position: relative;
+    }
+    .container {
+        margin: 0 5%;
+    }
+    .icons {
+        transform: scale(1.8);
+    }
+    #index {
+        flex-direction: column;
+    }
+    .profile_portrait {
+        height: 180px !important;
+        width: 180px !important;
+    }
+    .column-1 {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .icons {
+        transform: none;
+    }
+}
