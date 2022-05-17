@@ -100,7 +100,7 @@ br {
 }
 
 .icons {
-    padding: 2rem 0;
+    margin: 2.4rem;
     width: 100%;
     text-align: center;
     transform: scale(3);
@@ -177,16 +177,12 @@ br {
     justify-content: flex-start !important;
 }
 
-.profile-photo {
-    height: var(--nav-bar-height);
-    margin-top: 10px;
-    width: 250px;
-    visibility: hidden;
-    margin-left: 1.5rem;
-}
-
-.show {
-    visibility: visible;
+.hamburger {
+    display: none;
+    justify-content: flex-start;
+    margin: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 /* Index CSS */
@@ -194,7 +190,7 @@ br {
     height: 100vh;
     position: relative;
     color: var(--primary-color);
-    background: url('../image/background.jpg') no-repeat center center/cover;;
+    background: url('../assets/image/background.jpg') no-repeat center center/cover;;
 }
 
 .profile_portrait {
@@ -202,6 +198,7 @@ br {
     width: 400px !important;
     border-radius: 50%;
     padding-right: 0 !important;
+    object-fit: cover;
 }
 
 .column-1 {
@@ -224,7 +221,13 @@ br {
 }
 
 .profile-btn:hover, .btn-primary:hover, .btn-secondary:hover {
-    background-color: var(--secondary-text-color);
+    border: 1px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color) !important;
+}
+
+a:hover {
+    color: var(--primary-color) !important;
 }
 
 /* Work Page */
@@ -232,11 +235,14 @@ br {
     padding: 1rem auto;
 }
 
-.flex-items img {
-    display: block;
+.proj-img {
+    object-fit: fill;
+    max-height: 100%;
+    max-width: 100%;
     width: 50%;
-    height: 400px;
-    object-fit: cover;
+    height: 400px;  
+    display: block;
+    margin: auto auto;
 }
 
 .project-item {
@@ -298,16 +304,7 @@ br {
 
 /* About Page*/
 .download-btn {
-    text-decoration: none;
-    font-weight: var(--font-weight);   
-    padding: 8px 20px;
-    transition: opacity 4s ease-in-out;
-}
-
-.download-btn:hover {
-    text-decoration: none;
-    cursor: pointer;
-    opacity: 0.6;
+    margin-top: 1rem;
 }
 
 /* Footer */
@@ -353,9 +350,14 @@ br {
     margin-bottom: 2rem;
 }
 
+#case .row .proj-img {
+    width: 33%;
+}
+
 .link{
     display: flex;
     align-items: center;
+    margin: 0 auto;
 }
 
 #case .link{
@@ -375,29 +377,46 @@ br {
     .action-btn {
         position: relative;
     }
-    body {
-        font-size: calc(0.8 * var(--font-size));
-    }
     .sm-flex-dir{
         flex-direction: column !important;
         align-items: center;
     }
-    .flex-items img {
+    .flex-items img,  #case .row .proj-img {
         height: 320px;
         width: 100%;
         padding-right: 0;
+        margin-bottom: 1rem;
     }
-    .grid-item-title {
-        margin-top: 1rem;
+    .download-btn {
+        margin-top: 2rem;
     }
 }
 
 @media screen and (max-width: 768px){
     body{
         overflow-x: scroll;
+        font-size: calc(0.8 * var(--font-size));
+    }
+    .hamburger {
+        display: flex;
     }
     .project-item--desc {
         line-height: 1.2;
+    }
+    .navigation-list{
+        display: none;
+    }
+    .main-navigation{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+    .navigation-list.show{
+        display: block;
+        text-align: start;
+        border: 1px solid var(--primary-text-color);
     }
     .project-content {
         justify-content: center;
@@ -408,15 +427,12 @@ br {
     .container {
         margin: 0 5%;
     }
-    .icons {
-        transform: scale(2);
-    }
     #index {
         flex-direction: column;
     }
     .profile_portrait {
-        height: 180px !important;
-        width: 180px !important;
+        height: 240px !important;
+        width: 240px !important;
     }
     .column-1 {
         padding-left: 0;

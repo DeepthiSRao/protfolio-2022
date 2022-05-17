@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="shortcut icon" href="./image/favicon-32x32.ico"> 
+    <link rel="shortcut icon" href="./assets/image/favicon-32x32.ico"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -23,7 +23,12 @@
     </script>        
 </head>
 <body>
-    <header id="page-header">       
+    <header id="page-header">
+        <div class="hamburger">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </div>    
         <nav class="main-navigation">
             <ul role="menubar" class="navigation-list">
                 <li role="presentation">
@@ -44,7 +49,7 @@
     <main>
         <!-- Index -->
         <section id="index" class="flex-items row">
-            <img src="./image/profile_photo.jpg" class="profile_portrait" alt="profile photo">
+            <img src="./assets/image/profile_photo.jpg" class="profile_portrait" alt="profile photo">
             <div class="profile_desc column-1">
                 <h1>Deepthi Rao</h1>
                 <h2>FrontEnd Developer | Bay Area, USA</h2>
@@ -63,14 +68,21 @@
                 <h1>About Page</h1>
             </header>
             <div class="flex-items row sm-flex-dir">
-                <p class="text-primary flex-column">
-                    Hi, My name is Deepthi Rao.<br/> 
-                    I am a Web developer with 2+ years experience in ReactJS. I love to code and strive to learn new technology along with understanding the 
-                    concepts behind the solution and its implementation.<br/>
-                    I took the course in Careerfoundry to formalize my understanding about web 
-                    development and to invest my time as I was waiting for my work permit to be issued.<br/>
-                    In my free time you can find playing video game, painting or walking.
-                </p>
+                <div class="flex-column">
+                    <p class="text-primary">
+                        Hi, I’m Deepthi Rao, a Full stack web developer from California with experience in developing
+                        responsive web applications. I’ve passion for learning and a desire to keep up with the latest
+                        technology trends. In my free time you can find playing video game, painting or walking.<br/>
+    
+                        From my previous experience, I learnt to look for solutions even when it was difficult to debug. I
+                        began to feel slowed down in the hardware industry and this made me look into the world of
+                        software development. I was curious to understand how the web works which made the
+                        engineer in me learn and look for solutions.<br/>
+    
+                        Given an opportunity, I would bring my strong technical knowledge, enthusiasm to learn and
+                        strategic approach to achieve tasks.<br/>
+                    </p>
+                </div>
                 <div class="flex-column">
                     <h2 class="grid-item-title">My Skills</h2>
                     <br>
@@ -87,9 +99,12 @@
                     </div>
                 </div>
             </div>                   
-            <!-- <div class="primary-btn my-1">
-                <a href="dummy_file.pdf" class="download-btn btn-primary" download> Resume </a>
-            </div> -->
+                <a href="./assets/Rao_Deepthi_Resume.PDF" class="btn-primary download-btn link" target="_blank">
+                    <span class="material-symbols-outlined">
+                        download_for_offline
+                    </span>
+                    &nbsp;My Resume
+                </a>
         </section>
         <section id="work" class="container flex-items column">
             <header class="section-header">
@@ -98,7 +113,7 @@
             <div class="project-list">
                 <!-- 2. myFlix Client React App -->
                 <div class="flex-items row project-item sm-flex-dir">
-                    <img src="./image/project/myFlix_react.png" alt="Project Pic">
+                    <img src="./assets/image/project/myFlix_react.png" alt="Project Pic" class="proj-img">
                     <div class="flex-items column content">
                         <h2 class="grid-item-title">myFlix</h2>                                       
                         <p class="project-item--desc">
@@ -107,21 +122,18 @@
                             Users are allowed to view the movie details, director info, genre info, favorite a movies and search movie by title.
                         </p>
                         <div class="action-btn">
-                            <button class="btn-primary mx-1">
-                                <a href="https://github.com/DeepthiSRao/myFlix-client" target="_blank">Github</a>
-                            </button>
-                            <button class="btn-primary mx-1">
-                                <a href="https://myflix-react-app.netlify.app/" target="_blank">Demo</a>
-                            </button>
-                            <button class="btn-primary mx-1">
-                                <a href="./case.html">Case Study</a>
-                            </button>
+                            <a href="https://github.com/DeepthiSRao/myFlix-client" target="_blank" class="btn-primary mx-1">
+
+                                Github
+                            </a>
+                            <a href="https://myflix-react-app.netlify.app/" target="_blank" class="btn-primary mx-1">Demo</a>
+                            <a href="./case.html" class="btn-primary mx-1">Case Study</a>
                         </div>
                     </div>
                 </div>
                 <!-- 1. Pokemon JS App -->
                 <div class="flex-items row-reverse project-item sm-flex-dir">
-                    <img src="./image/project/pokedex.png" alt="Project Pic">
+                    <img src="./assets/image/project/pokedex.png" alt="Project Pic" class="proj-img">
                     <div class="flex-items column content">
                         <h2 class="grid-item-title">Pokedex</h2>                                       
                         <p class="project-item--desc">
@@ -130,18 +142,14 @@
                             The list is searchable by name. On click of pokemon, modal is displayed with Pokémon sprites, height and type.
                         </p>
                         <div class="action-btn">
-                            <button class="btn-primary mx-1">
-                                <a href="https://github.com/DeepthiSRao/pokemon-js-app" target="_blank">Github</a>
-                            </button>
-                            <button class="btn-primary mx-1">
-                                <a href="https://deepthisrao.github.io/pokemon-js-app/" target="_blank">Demo</a>
-                            </button>
+                            <a href="https://github.com/DeepthiSRao/pokemon-js-app" target="_blank" class="btn-primary mx-1">Github</a>
+                            <a href="https://deepthisrao.github.io/pokemon-js-app/" target="_blank" class="btn-primary mx-1">Demo</a>
                         </div>
                     </div>
                 </div>
                 <!-- 3. Meetup App -->
                 <div class="flex-items row project-item sm-flex-dir">
-                    <img src="./image/project/meetup_react.png" alt="Project Pic">
+                    <img src="./assets/image/project/meetup_react.png" alt="Project Pic" class="proj-img">
                     <div class="flex-items column content">
                         <h2 class="grid-item-title">MeetUp</h2>                                       
                         <p class="project-item--desc">
@@ -150,18 +158,14 @@
                             Users can filter events by city, specify the number of events to display, show/hide event details, and app offline feature is available.
                         </p>
                         <div class="action-btn">
-                            <button class="btn-primary mx-1">
-                                <a href="https://github.com/DeepthiSRao/meet-react-app" target="_blank">Github</a>
-                            </button>
-                            <button class="btn-primary mx-1">
-                                <a href="https://deepthisrao.github.io/meet-react-app" target="_blank">Demo</a>
-                            </button>
+                            <a href="https://github.com/DeepthiSRao/meet-react-app" target="_blank" class="btn-primary mx-1">Github</a>
+                            <a href="https://deepthisrao.github.io/meet-react-app" target="_blank" class="btn-primary mx-1">Demo</a>
                         </div>
                     </div>
                 </div>
                 <!-- 4. myFlix Client Angular App -->
                 <div class="flex-items row-reverse project-item sm-flex-dir">
-                    <img src="./image/project/myFlix_angular.png" alt="Project Pic">
+                    <img src="./assets/image/project/myFlix_angular.png" alt="Project Pic" class="proj-img">
                     <div class="flex-items column content">
                         <h2 class="grid-item-title">myFlix Angular</h2>                                       
                         <p class="project-item--desc">
@@ -170,18 +174,14 @@
                             Users are allowed to view the movie details, director info, genre info and add/delete a movie to user favorite list.
                         </p>
                         <div class="action-btn">
-                            <button class="btn-primary mx-1">
-                                <a href="https://github.com/DeepthiSRao/myflix-angular-client" target="_blank">Github</a>
-                            </button>
-                            <button class="btn-primary mx-1">
-                                <a href="https://deepthisrao.github.io/myflix-angular-client/home" target="_blank">Demo</a>
-                            </button>
+                            <a href="https://github.com/DeepthiSRao/myflix-angular-client" target="_blank" class="btn-primary mx-1">Github</a>
+                            <a href="https://deepthisrao.github.io/myflix-angular-client/home" target="_blank" class="btn-primary mx-1">Demo</a>
                         </div>
                     </div>
                 </div>
                 <!-- 5. Chat App -->
                 <div class="flex-items row project-item sm-flex-dir" id="project2">
-                    <img src="./image/project/ChatApp.png" alt="Project Pic">
+                    <img src="./assets/image/project/ChatApp.png" alt="Project Pic" class="proj-img" >
                     <div class="flex-items column content">
                         <h2 class="grid-item-title">Chat App</h2>                                       
                         <p class="project-item--desc">
@@ -191,9 +191,7 @@
                             Firestore has been used to store data.
                         </p>
                         <div class="action-btn">
-                            <button class="btn-primary mx-1">
-                                <a href="https://github.com/DeepthiSRao/chat-app" target="_blank">Github</a>
-                            </button>
+                            <a href="https://github.com/DeepthiSRao/chat-app" target="_blank" class="btn-primary mx-1">Github</a>
                         </div>
                     </div>
                 </div>   
@@ -233,14 +231,17 @@
                         id="message" 
                         cols="30" 
                         rows="8"
-                        maxlength="400"
+                        maxlength="600"
                         required
                         ></textarea>
                 </div>
                 <button 
-                    class="btn-primary btn-submit" 
+                    class="btn-primary link btn-submit" 
                     type="submit">
-                    Send
+                    <span class="material-symbols-outlined">
+                        send
+                    </span>
+                    &nbsp;Send
                 </button>                        
             </form>
         </div>
