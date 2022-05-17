@@ -304,7 +304,7 @@ a:hover {
 
 /* About Page*/
 .download-btn {
-    margin-top: 1rem;
+    margin-top: 2rem !important;
 }
 
 /* Footer */
@@ -388,7 +388,7 @@ a:hover {
         margin-bottom: 1rem;
     }
     .download-btn {
-        margin-top: 2rem;
+        margin-top: 4rem !important;
     }
 }
 
