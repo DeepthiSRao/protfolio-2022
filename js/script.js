@@ -1,4 +1,4 @@
-/* Function for changing head color */
+/* Function for change navnar color on scroll */
 const scrollHeader = () => {
     const header = document.getElementById('page-header');
     //const header_logo = document.querySelector('.profile-photo');
@@ -14,7 +14,7 @@ const scrollHeader = () => {
   }
   window.addEventListener('scroll', scrollHeader);
   
-/* Function for adding active link */
+/* Function for adding active link to navbar*/
 const navItems = document.querySelector('.navigation-list');
 
 const setActive = e => {
@@ -28,7 +28,7 @@ const setActive = e => {
 
 navItems.addEventListener("click", setActive);
 
-/* Add active to the nav-item after scrolling  */
+/* Set active to the nav-item after scrolling  */
 const sections = document.querySelectorAll('section');
 
 function scrollActive() {
@@ -88,3 +88,22 @@ const sendMail = (templateParams) => {
               console.log('FAILED to send message');
           });
 }
+
+/* Display hamberger menu on small screens */
+let hamburger = document.querySelector('.hamburger');
+let menu = document.querySelector('.main-navigation');
+let menuList = document.querySelector('.navigation-list');
+
+const toggleMenu = () => {
+  menuList.classList.toggle('show');
+}
+hamburger.addEventListener('click', toggleMenu);
+
+// Hide navbar after a menu item has been clicked
+const hideMenu = () => {
+  if (menuList.classList.contains('show')) {
+    menuList.classList.remove('show');
+  }
+}
+
+menuList.addEventListener('click', hideMenu);
